@@ -1,0 +1,8 @@
+<%= simple_form_for(@planet) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :mass %>
+  <%= f.input :area %>
+  <%= f.input :solar_system %>
+  <%= f.input :photo, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
+<% end %>
