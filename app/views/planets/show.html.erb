@@ -1,4 +1,7 @@
 <%= @planet.name %>
+<%= @planet.mass %>
+<%= @planet.aera %>
+<%= @planet.solar_system %>
 
 <% @planet.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
