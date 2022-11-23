@@ -2,7 +2,10 @@
   <% @planets.each do |planet| %>
   <div class="planets-cards">
     <div class="card" style="width: 18rem;">
-      <img src="https://images.pexels.com/photos/7661456/pexels-photo-7661456.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="...">
+    <% planet.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
+    <% end %>
+      <%# <img src=" planet.photo.attached? " class="card-img-top" alt="..."> %>
       <div class="card-body">
         <h5 class="card-title">Planet</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -12,49 +15,3 @@
   </div>
     <% end %>
 </div>
-
-<%#
-  <div class="card" style="width: 18rem;">
-    <img src="https://images.pexels.com/photos/7661456/pexels-photo-7661456.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Planet 2</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img src="https://images.pexels.com/photos/8474996/pexels-photo-8474996.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Planet 3</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img src="https://media.istockphoto.com/id/1216741727/fr/photo/la-plan%C3%A8te-est-entour%C3%A9e-danneaux-de-gaz.jpg?s=612x612&w=0&k=20&c=h210ifOcR0Gwgz4h-K73vtljLARsIrzMGi42HNjIF_I=" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Planet 4</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img src="https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Planet 5</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img src="https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Planet 6</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div> %>
