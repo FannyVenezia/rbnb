@@ -1,5 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
-.planets-cards {
-  text-align: center;
-}
+
+// Formulaire
+@import "form";
+
+// Pages New et Edit
+@import "edit";
+@import "new";
+@import "recap";
+@import "show";

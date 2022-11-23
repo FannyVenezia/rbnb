@@ -10,6 +10,7 @@ require "open-uri"
 Planet.destroy_all
 User.destroy_all
 
+
 user_1 = User.create(email: 'toto@gmail.com', password: 'tototo')
 user_2 = User.create(email: 'tata@gmail.com', password: 'tatata')
 user_3 = User.create(email: 'titi@gmail.com', password: 'tititi')
@@ -68,19 +69,3 @@ neptune_photos = [
 neptune = Planet.new(name: "neptune", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_3)
 neptune.photos.attach(neptune_photos)
 neptune.save
-
-
-
-
-
-
-
-# file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202835/samples/p4_ffmtkz.jpg")
-# Planet = Planet.new(title: "Planet-uranus", body: "A great Trip")
-# article.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-# article.save
-
-# file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202864/samples/planet_1_tfeqto.jpg")
-# Planet = Planet.new(title: "Planet-neptune", body: "A wonderful experience")
-# article.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-# article.save

@@ -1,7 +1,13 @@
+<%= render "shared/navbar" %>
+<div class="container">
+
 <h1>Edit your planet's informations:</h1>
 
+<h2 class="title-new-edit">Edit your planet's informations:</h2>
 <%= render "form", planet: @planet %>
 
 <div>|
   <%= link_to "Back to planets", root_path %>
+</div>
+
 </div>

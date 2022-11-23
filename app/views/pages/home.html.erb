@@ -1,39 +1,16 @@
+<video id="background-video" autoplay loop muted>
+  <source src="https://res.cloudinary.com/dsas0wiz2/video/upload/v1669198222/video_zzk78s.mp4" type="video/mp4">
+</video>
+
 <div class="banner">
-  <h1>Welcome to the next level of travelling</h1>
-  <h3>A revolutionnary technology</h3>
-  <p>Rent planet for vacation or long-term</p>
-</div>
-
-<div class="container">
-  <div class="cards-list">
-    <div class="card" style="width: 23rem;">
-      <img class="card-img-top" src="https://images.pexels.com/photos/13074506/pexels-photo-13074506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Card image cap">
-      <div class="card-body" style="display: flex">
-        <p class="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
-        <%= image_tag "https://images.pexels.com/photos/698532/pexels-photo-698532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", class: "avatar-large", alt: "avatar-large" %>
-      </div>
-    </div>
-
-    <div class="card" style="width: 23rem;">
-      <img class="card-img-top" src="https://images.pexels.com/photos/13074506/pexels-photo-13074506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Card image cap">
-      <div class="card-body" style="display: flex">
-        <p class="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
-        <%= image_tag "https://images.pexels.com/photos/13083161/pexels-photo-13083161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", class: "avatar-large", alt: "avatar-large" %>
-      </div>
-    </div>
-
-    <div class="card" style="width: 23rem;">
-      <img class="card-img-top" src="https://images.pexels.com/photos/13074506/pexels-photo-13074506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Card image cap">
-      <div class="card-body" style="display: flex">
-        <p class="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
-        <%= image_tag "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", class: "avatar-large", alt: "avatar-large" %>
-      </div>
-    </div>
-  </div>
+  <h1 style="-webkit-text-stroke: 1px black; color: white">Experience the next level of travelling</h1>
+  <h2 style="-webkit-text-stroke: 1px black; color: white">rent a planet for your next holidays</h2>
+  <h2 style="-webkit-text-stroke: 1px black; color: white; margin-top: 20px">the adventure of a life-time</h2>
+  <%= link_to "Dare !", planets_path, type: "button", class: "btn btn-dark", style: "border-radius: 70px; margin-top: 20px" %>
 </div>
 
 <div class="footer">
-  <p>A site made with love</p>
+  <p><span data-controller="typed-js"></span></p>
 		<a href="#"><i class="fab fa-youtube"></i></a>
 		<a href="#"><i class="fab fa-facebook"></i></a>
 		<a href="#"><i class="fab fa-twitter"></i></a>
