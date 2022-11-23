@@ -33,13 +33,13 @@
         <li><%=  @planet.solar_system %></li><br>
         <li><h4>Price:  From 20 K$ </h4></li>
     </div>
+    <div class= "button_back_planets">
+      <%= link_to "Rent this planet", recap_path, class: "btn btn-outline-light"%>
+    </div>
   </ul>
   <div class = "buttons" >
     <div class= "button_back_planets">
       <%= link_to "Back to planets", planets_path, class: "btn btn-outline-light"%>
-    </div>
-    <div class= "button_back_planets">
-      <%= link_to "Rent this planet", recap_path, class: "btn btn-outline-light"%>
     </div>
 
     <%# <div class= "owner_buttons">
