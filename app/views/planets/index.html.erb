@@ -1,3 +1,6 @@
+<%= render "shared/navbar" %>
 <% @planets.each do |planet| %>
 <%= planet.name %>
 <% end %>
+
+<%= link_to "New planet", new_planet_path if policy(Planet).new? %>

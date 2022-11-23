@@ -7,4 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.destroy_all
-User.create(email: 'toto@gmail.com', password: 'tototo')
+Planet.destroy_all
+
+user_1 = User.create(email: 'toto@gmail.com', password: 'tototo')
+Planet.create(name: "Saturne", mass: "4354534", area: "34354556", user: user_1)
