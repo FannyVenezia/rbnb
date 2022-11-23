@@ -3,7 +3,7 @@
  <%#   <%=image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <%#  <% end %>
 
-<div class= show_container>
+<div class = "show_container col-md-12" >
 
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -31,11 +31,12 @@
       <li><%=  @planet.solar_system %></li>
     </div>
     <div class= button_back_planets>
-      <%= link_to "Back to planets", root_path %>
+      <%= link_to "Back to planets", root_path, class: "btn btn-outline-light"%>
     </div>
     <div class= detail_rent>
       <h5>Price: From 20 K$</h5>
       <button type="button" class="btn btn-outline-light">Rent this planet</button>
     </div>
   </ul>
+
 </div>
