@@ -1,6 +1,17 @@
-<%= render "shared/navbar" %>
-<% @planets.each do |planet| %>
-<%= planet.name %>
-<% end %>
-
-<%= link_to "New planet", new_planet_path if policy(Planet).new? %>
+<div class="test" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+  <% @planets.each do |planet| %>
+  <div class="planets-cards">
+    <div class="card" style="width: 18rem;">
+    <% planet.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
+    <% end %>
+      <%# <img src=" planet.photo.attached? " class="card-img-top" alt="..."> %>
+      <div class="card-body">
+        <h5 class="card-title">Planet</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to "View details", planet_path(planet), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+    <% end %>
+</div>
