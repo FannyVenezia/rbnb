@@ -1,9 +1,14 @@
 .banner {
-	background-image: url("https://images.pexels.com/photos/11101908/pexels-photo-11101908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	// background-image: url("https://images.pexels.com/photos/11101908/pexels-photo-11101908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 	padding: 95px;
 	text-align: center;
   background-size: cover;
   opacity: 2;
-  color: white;
-  height: 400px;
+  color: black;
+  margin-top: 60px;
+}
+
+h1 h3 p {
+  -webkit-text-stroke: 1px red;
+ color: white;
 }
