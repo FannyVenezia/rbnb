@@ -7,14 +7,18 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-
+    authorize @booking
   end
 
   def create
+    authorize @booking
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.planet = @planet
+    @planet = Planet.find(params[:planet_id])
 
     if @booking.save
-      redirect_to planet_path(@booking), notice: "Your booking was successfully created."
+      redirect_to root_path, notice: "Your booking was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,7 +32,7 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params
