@@ -1,4 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
+
+// Formulaire
+@import "form";
+
+// Pages New et Edit
+@import "edit";
+@import "new";
 @import "recap";
 @import "show";
