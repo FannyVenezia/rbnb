@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.destroy_all
 Planet.destroy_all
-
+User.destroy_all
 user_1 = User.create(email: 'toto@gmail.com', password: 'tototo')
-Planet.create(name: "Saturne", mass: "4354534", area: "34354556", user: user_1)
+user_2 = User.create(email: 'tata@gmail.com', password: 'tatata')
+
+
+Planet.create(name: 'Klingon', mass: '2000', area: '1000', solar_system: 'Andromede', user: user_1)
+Planet.create(name: 'Hobbit', mass: '2000', area: '1000', solar_system: 'Vega', user: user_2)
