@@ -1,0 +1,20 @@
+.container .avatar-large {
+  width: 56px;
+  border-radius: 50%;
+}
+
+
+.container .cards-list {
+  display: flex;
+  gap: 10px;
+
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container .card {
+  height: 300px;
+}

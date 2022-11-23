@@ -20,6 +20,8 @@ gem "devise"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 
+gem "pundit"
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -28,6 +30,8 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+gem "cloudinary"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
