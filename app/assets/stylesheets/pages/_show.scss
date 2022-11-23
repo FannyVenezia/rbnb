@@ -3,7 +3,6 @@
   color:  #eacef9;
   padding-top: 40px;
   padding-bottom: 40px;
-
 }
 
 .title_show {
@@ -11,21 +10,14 @@
 }
 
 .button_back_planets{
-  display: flex;
-  justify-content: flex-start;
   margin-top: 80px;
-
 }
 
 .detail_rent{
   color: white;
-  display: flex;
-  justify-content: flex-end;
   margin-right: 40px;
 }
 .button_rent{
-  display: flex;
-  justify-content: flex-end;
   margin-right: 40px;
 }
 .black_container{
@@ -38,4 +30,11 @@
 .owner_buttons{
   text-align: center;
   padding-bottom: 60px;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+.price{
+  text-align: right;
 }

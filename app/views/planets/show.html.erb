@@ -4,7 +4,7 @@
 <%#  <% end %>
 
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="https://images.pexels.com/photos/1276314/pexels-photo-1276314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="First slide">
@@ -19,23 +19,23 @@
 </div>
 
 <div class ="black_container">
+
   <ul class= "planet_description">
-   <div class= "planet_text">
-    <div class= "title_show"><h3><strong>Planet name:</strong></h3></div>
-      <li><%= @planet.name %></li>
-    <div class= "title_show"><h3><strong>Mass:</strong></h3></div>
-      <li><%= @planet.mass%></li>
-    <div class= "title_show"><h3><strong>Area:</strong></h3></div>
-      <li><%=  @planet.area%></li>
-    <div class= "title_show"><h3><strong>Solar system:</strong></h3></div>
-      <li><%=  @planet.solar_system %></li>
+    <div class= "planet_text">
+      <div class= "title_show"><h3><strong>Planet name:</strong></h3></div>
+        <li><%= @planet.name %></li>
+      <div class= "title_show"><h3><strong>Mass:</strong></h3></div>
+        <li><%= @planet.mass%></li>
+      <div class= "title_show"><h3><strong>Area:</strong></h3></div>
+        <li><%=  @planet.area%></li>
+      <div class= "title_show"><h3><strong>Solar system:</strong></h3></div>
+        <li><%=  @planet.solar_system %></li><br>
+        <li><h4>Price:  From 20 K$ </h4></li>
     </div>
   </ul>
+  <div class = "buttons" >
     <div class= "button_back_planets">
       <%= link_to "Back to planets", planets_path, class: "btn btn-outline-light"%>
-    </div>
-    <div class= "detail_rent">
-      <h5>Price: From 20 K$</h5>
     </div>
     <div class= "button_rent">
       <button type="button" class="btn btn-outline-light">Rent this planet</button>
@@ -50,6 +50,8 @@
       </div>
     </div>
   </div>
+</div>
+
 <div class="footer">
   <p>A site made with love</p>
 		<a href="#"><i class="fab fa-youtube"></i></a>
