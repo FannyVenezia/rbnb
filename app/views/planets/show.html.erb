@@ -3,40 +3,58 @@
  <%#   <%=image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <%#  <% end %>
 
-<div class = "show_container col-md-12" >
 
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="https://images.unsplash.com/photo-1630839437035-dac17da580d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2515&q=80" alt="First slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://images.pexels.com/photos/1276314/pexels-photo-1276314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images.pexels.com/photos/12498795/pexels-photo-12498795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images.pexels.com/photos/5476413/pexels-photo-5476413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Third slide">
+    </div>
+  </div>
+</div>
+
+<div class ="black_container">
+  <ul class= "planet_description">
+   <div class= "planet_text">
+    <div class= "title_show"><h3><strong>Planet name:</strong></h3></div>
+      <li><%= @planet.name %></li>
+    <div class= "title_show"><h3><strong>Mass:</strong></h3></div>
+      <li><%= @planet.mass%></li>
+    <div class= "title_show"><h3><strong>Area:</strong></h3></div>
+      <li><%=  @planet.area%></li>
+    <div class= "title_show"><h3><strong>Solar system:</strong></h3></div>
+      <li><%=  @planet.solar_system %></li>
+    </div>
+  </ul>
+    <div class= "button_back_planets">
+      <%= link_to "Back to planets", planets_path, class: "btn btn-outline-light"%>
+    </div>
+    <div class= "detail_rent">
+      <h5>Price: From 20 K$</h5>
+    </div>
+    <div class= "button_rent">
+      <button type="button" class="btn btn-outline-light">Rent this planet</button>
+    </div>
+
+    <div class= "owner_buttons">
+      <div class= "button_edit_planet">
+        <%= link_to "Edit your planet", edit_planet_path, class: "btn btn-outline-light"%>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://images.unsplash.com/photo-1634176866089-b633f4aec882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYW5ldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60" alt="Third slide">
+      <div class= "button_delete_planet">
+        <%= link_to "Delete your planet", planets_path, class: "btn btn-outline-light"%>
       </div>
     </div>
   </div>
-
-  <ul class= planet_description>
-   <div class= planet_text>
-    <div class= title_show><h3><strong>Planet name:</strong></h3></div>
-      <li><%= @planet.name %></li>
-    <div class= title_show><h3><strong>Mass:</strong></h3></div>
-      <li><%= @planet.mass%></li>
-    <div class= title_show><h3><strong>Area:</strong></h3></div>
-      <li><%=  @planet.area%></li>
-    <div class= title_show><h3><strong>Solar system:</strong></h3></div>
-      <li><%=  @planet.solar_system %></li>
-    </div>
-    <div class= button_back_planets>
-      <%= link_to "Back to planets", root_path, class: "btn btn-outline-light"%>
-    </div>
-    <div class= detail_rent>
-      <h5>Price: From 20 K$</h5>
-      <button type="button" class="btn btn-outline-light">Rent this planet</button>
-    </div>
-  </ul>
-
+<div class="footer">
+  <p>A site made with love</p>
+		<a href="#"><i class="fab fa-youtube"></i></a>
+		<a href="#"><i class="fab fa-facebook"></i></a>
+		<a href="#"><i class="fab fa-twitter"></i></a>
+		<a href="#"><i class="fab fa-github"></i></a>
+		</ul>
 </div>
