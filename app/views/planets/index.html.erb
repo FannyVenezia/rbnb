@@ -1,6 +1,15 @@
 <%= render "shared/navbar" %>
 <div class ="big_container">
 
+<%= form_with url: planets_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a planet"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="test" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
  <% @planets.each do |planet| %>
   <div class="planets-cards">

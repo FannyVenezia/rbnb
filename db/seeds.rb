@@ -26,8 +26,6 @@ saturne = Planet.new(name: "Saturne", mass: "29999999", area: "68556674745", sol
 saturne.photos.attach(saturne_photos)
 saturne.save
 
-
-
 uranus1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669305211/development/uranus_fmujoj.jpg")
 uranus2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669296238/development/Mars_Girl_l4mi3w.jpg")
 

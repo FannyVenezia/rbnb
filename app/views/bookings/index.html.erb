@@ -1,0 +1,4 @@
+<% @bookings.each do |booking| %>
+  <%= booking.number_of_visitors %>
+  <%= link_to "View details", bookings_path(booking), class: "btn btn-primary" %>
+<% end %>

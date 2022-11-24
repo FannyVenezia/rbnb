@@ -34,7 +34,7 @@
         <li><h4>Price:  From 20 K$ </h4></li>
     </div>
     <div class= "button_back_planets">
-      <%= link_to "Rent this planet", recap_path, class: "btn btn-outline-light"%>
+      <%= link_to "Rent this planet", new_planet_booking_path(@planet), class: "btn btn-outline-light"%>
     </div>
   </ul>
   <div class = "buttons" >
@@ -47,7 +47,7 @@
         <%= link_to "Edit your planet", edit_planet_path, class: "btn btn-outline-light"%>
       </div>
       <div class= "button_delete_planet">
-        <%= link_to "Delete your planet", planets_path, class: "btn btn-outline-light"%>
+        <%= link_to "Delete your planet", planet_path(@planet), data: { turbo_method: :delete }, class: "btn btn-outline-light"%>
       </div>
     </div>
   </div>
