@@ -1,3 +1,5 @@
+<%= render "shared/navbar" %>
+
 <div class="test" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
   <% @planets.each do |planet| %>
   <div class="planets-cards">
@@ -7,8 +9,8 @@
     <% end %>
       <%# <img src=" planet.photo.attached? " class="card-img-top" alt="..."> %>
       <div class="card-body">
-        <h5 class="card-title">Planet</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title"><%= planet.name %></h5>
+        <p class="card-text"> <%= planet.solar_system %> </p>
         <%= link_to "View details", planet_path(planet), class: "btn btn-primary" %>
       </div>
     </div>

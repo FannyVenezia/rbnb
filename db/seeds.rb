@@ -9,17 +9,11 @@ require "open-uri"
 
 Planet.destroy_all
 User.destroy_all
-
+Planet.destroy_all
 
 user_1 = User.create(email: 'toto@gmail.com', password: 'tototo')
 user_2 = User.create(email: 'tata@gmail.com', password: 'tatata')
 user_3 = User.create(email: 'titi@gmail.com', password: 'tititi')
-
-# Planet.create(name: "saturne", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_1)
-# Planet.create(name: "uranus", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_2)
-# Planet.create(name: "neptune", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_3)
-# Planet.create(name: "mars", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_1)
-# Planet.create(name: "pluton", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_1)
 
 saturne_file2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202835/samples/p4_ffmtkz.jpg")
 saturne_file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202811/samples/Mars_Girl_etkjzj.jpg")
@@ -31,7 +25,7 @@ saturne_photos = [
   }
 ]
 
-saturne = Planet.new(name: "saturne", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_1)
+saturne = Planet.new(name: "Saturne", mass: "29999999", area: "68556674745", solar_system: "Andromède", user: user_1)
 saturne.photos.attach(saturne_photos)
 saturne.save
 
@@ -48,13 +42,9 @@ uranus_photos = [
   }
 ]
 
-uranus = Planet.new(name: "uranus", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_2)
+uranus = Planet.new(name: "Uranus", mass: "29999999", area: "68556674745", solar_system: "Vega", user: user_2)
 uranus.photos.attach(uranus_photos)
 uranus.save
-
-
-
-
 
 neptune_file3 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202847/samples/earth-blue-planet-globe-planet-87651_zsweew.jpg")
 neptune_file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202864/samples/planet_1_tfeqto.jpg")
@@ -66,6 +56,6 @@ neptune_photos = [
   }
 ]
 
-neptune = Planet.new(name: "neptune", mass: "29999999", area: "68556674745", solar_system: "solar", user: user_3)
+neptune = Planet.new(name: "Neptune", mass: "29999999", area: "68556674745", solar_system: "Spock", user: user_3)
 neptune.photos.attach(neptune_photos)
 neptune.save

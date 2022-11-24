@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[create destroy]
 
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def new
@@ -27,6 +27,19 @@ class BookingsController < ApplicationController
   def destroy
     @booking.destroy
     redirect_to root_path, notice: "Your booking was successfully deleted."
+  end
+
+  def edit
+    authorize @booking
+  end
+
+  def update
+    authorize @booking
+    if @booking.update(booking_params)
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

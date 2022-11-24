@@ -17,6 +17,7 @@ class PlanetsController < ApplicationController
 
   def new
     @planet = Planet.new
+    @planet.user = current_user
     authorize @planet
   end
 
@@ -24,18 +25,14 @@ class PlanetsController < ApplicationController
     @planet = Planet.new(planet_params)
     @planet.user = current_user
     authorize @planet
-
-    if @planet.save
-      redirect_to planet_path(@planet), notice: "Planet was successfully created."
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @planet.save
+    redirect_to planets_path(@planet), notice: "Planet was successfully created."
   end
 
   def destroy
     authorize @planet
     @planet.destroy
-    redirect_to root_path, notice: "Planet was successfully destroyed."
+    redirect_to planets_path(@planet), notice: "Planet was successfully destroyed."
   end
 
   def edit
@@ -58,6 +55,6 @@ class PlanetsController < ApplicationController
   end
 
   def planet_params
-    params.require(:planet).permit(:name, :mass, :area, :solar_system, photos: [])
+    params.require(:planet).permit(:name, :mass, :area, :solar_system, :user, photos: [])
   end
 end
