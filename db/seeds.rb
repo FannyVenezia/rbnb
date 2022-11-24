@@ -30,8 +30,8 @@ uranus1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v166920282
 uranus2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202826/samples/p3_iobtka.jpg")
 
 uranus_photos = [
-  { io: uranus_file, filename: "planet3.jpg", content_type: "image/jpg" },
-  { io: uranus_file2, filename: "planet4.jpg", content_type: "image/jpg" }
+  { io: uranus1, filename: "planet3.jpg", content_type: "image/jpg" },
+  { io: uranus2, filename: "planet4.jpg", content_type: "image/jpg" }
 ]
 
 uranus = Planet.new(name: "Uranus", mass: "29999999", area: "68556674745", solar_system: "Vega", user: user_2)
