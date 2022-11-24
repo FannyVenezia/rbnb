@@ -10,7 +10,7 @@ require "open-uri"
 Planet.destroy_all
 User.destroy_all
 
-user_1 = User.create(email: 'toto@gmail.com', password: 'tototo')
+user_1 = User.create(email: 'toto@gmail.com', password: 'tototo', first_name: 'toto')
 user_2 = User.create(email: 'tata@gmail.com', password: 'tatata')
 user_3 = User.create(email: 'titi@gmail.com', password: 'tititi')
 
