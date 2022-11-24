@@ -1,21 +1,23 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[create destroy]
+  before_action :set_booking, only: %i[show edit update destroy]
 
   def index
-    @bookings = policy_scope(Booking)
+    @bookings = Booking.all
+  end
+
+  def show
   end
 
   def new
     @booking = Booking.new
-    authorize @booking
+    @planet = Planet.find(params[:planet_id])
   end
 
   def create
-    authorize @booking
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.planet = @planet
     @planet = Planet.find(params[:planet_id])
+    @booking.planet = @planet
 
     if @booking.save
       redirect_to root_path, notice: "Your booking was successfully created."
@@ -30,16 +32,12 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    authorize @booking
+    raise
   end
 
   def update
-    authorize @booking
-    if @booking.update(booking_params)
-      redirect_to root_path
-    else
-      render :edit, status: :unprocessable_entity
-    end
+    @booking.update(booking_params)
+    redirect_to root_path, notice: "Your booking was successfully changed."
   end
 
   private
