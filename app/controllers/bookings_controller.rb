@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.planet = @planet
 
     if @booking.save
-      redirect_to root_path, notice: "Your booking was successfully created."
+      redirect_to booking_path(@booking), notice: "Your booking was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to root_path, notice: "Your booking was successfully changed."
+    redirect_to bookings_path(@booking), notice: "Your booking was successfully changed."
   end
 
   private

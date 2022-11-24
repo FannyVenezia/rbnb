@@ -4,14 +4,14 @@ class PlanetsController < ApplicationController
 
   def index
     @planets = Planet.all
+    if params[:query].present?
+      @planets = Planet.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @planets = Planet.all
+    end
   end
 
   def show
-    authorize @planet
-  end
-
-  def recap
-    @planet = Planet.new
     authorize @planet
   end
 
@@ -32,7 +32,7 @@ class PlanetsController < ApplicationController
   def destroy
     authorize @planet
     @planet.destroy
-    redirect_to planets_path(@planet), notice: "Planet was successfully destroyed."
+    redirect_to planets_path, notice: "Planet was successfully destroyed."
   end
 
   def edit

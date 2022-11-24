@@ -7,6 +7,5 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:destroy, :edit, :index, :show]
   resources :reviews, only: [:destroy, :edit, :index, :show]
-  get 'recap', to: 'planets#recap'
   resources :foods, only: [:new, :create, :index]
 end

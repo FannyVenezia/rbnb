@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
     @planet = Planet.find(params[:planet_id])
     @review.planet = @planet
     @review.save
-    redirect_to root_path, notice: "Your review was successfully created."
+    redirect_to review_path(@review), notice: "Your review was successfully created."
   end
 
   def destroy
@@ -28,11 +28,16 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    authorize @review
   end
 
   def update
-    @review.update(review_params)
-    redirect_to reviews_path, notice: "Your review was successfully changed."
+    authorize @review
+    if @review.update(review_params)
+      redirect_to root_path, notice: "Your review was successfully changed."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
