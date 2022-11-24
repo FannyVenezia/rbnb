@@ -13,11 +13,13 @@
       <%= booking.end_date %>
       <h5>Number of travellers: </h5>
       <%= booking.number_of_visitors %>
-      <%= link_to "View details", bookings_path(booking), class: "btn btn-outline-dark" %>
+      <%= link_to "View details", booking_path(booking), class: "btn btn-outline-dark" %>
+      <%= link_to "Delete your booking", booking_path(booking), data: { turbo_method: :delete }, class: "btn btn-outline-dark" %>
+      <%= link_to "Edit your booking", edit_booking_path(booking), class: "btn btn-outline-dark"%>
     <% end %>
  </div>
 </div>
- 
+
 <%= link_to "Back to planets", planets_path, class: "btn btn-outline-dark"%>
 
 
