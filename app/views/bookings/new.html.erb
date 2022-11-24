@@ -1,0 +1,6 @@
+<%= simple_form_for(@planet) do |f| %>
+  <%= f.input :number_of_visitors %>
+  <%= f.input :start_date, as: :datepicker %>
+  <%= f.input :end_date, as: :string  %>
+  <%= f.submit %>
+<% end %>
