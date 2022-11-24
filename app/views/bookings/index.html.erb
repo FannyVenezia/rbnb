@@ -1,0 +1,19 @@
+<%= render "shared/navbar" %>
+
+  <h2>Hello <%= user.first_name %> !</h2>
+    <% planet.bookings.each do |booking| %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+      <%= booking.number_of_visitors %>
+    <% end %>
+
+<%= link_to "Back to planets", planets_path, class: "btn btn-outline-light"%>
+
+<div class="footer" style="background-color: rgba(35, 35, 104, 0.301)">
+  <p><span data-controller="typed-js"></span></p>
+		<a href="#"><i class="fab fa-youtube"></i></a>
+		<a href="#"><i class="fab fa-facebook"></i></a>
+		<a href="#"><i class="fab fa-twitter"></i></a>
+		<a href="#"><i class="fab fa-github"></i></a>
+		</ul>
+</div>

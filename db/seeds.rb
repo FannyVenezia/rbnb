@@ -9,7 +9,6 @@ require "open-uri"
 
 Planet.destroy_all
 User.destroy_all
-Planet.destroy_all
 
 user_1 = User.create(email: 'toto@gmail.com', password: 'tototo')
 user_2 = User.create(email: 'tata@gmail.com', password: 'tatata')
@@ -19,10 +18,8 @@ saturne_file2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v166
 saturne_file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202811/samples/Mars_Girl_etkjzj.jpg")
 
 saturne_photos = [
-  {
-    io: saturne_file, filename: "planet1.png", content_type: "image/png",
-    io: saturne_file2, filename: "planet2.png", content_type: "image/png",
-  }
+  {io: saturne_file, filename: "planet1.jpg", content_type: "image/jpg"},
+   {io: saturne_file2, filename: "planet2.jpg", content_type: "image/jpg"}
 ]
 
 saturne = Planet.new(name: "Saturne", mass: "29999999", area: "68556674745", solar_system: "Andromède", user: user_1)
@@ -36,10 +33,8 @@ uranus_file2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669
 uranus_file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202826/samples/p3_iobtka.jpg")
 
 uranus_photos = [
-  {
-    io: uranus_file, filename: "planet3.png", content_type: "image/png",
-    io: uranus_file2, filename: "planet4.png", content_type: "image/png",
-  }
+  {io: uranus_file, filename: "planet3.jpg", content_type: "image/jpg"},
+    {io: uranus_file2, filename: "planet4.jpg", content_type: "image/jpg"}
 ]
 
 uranus = Planet.new(name: "Uranus", mass: "29999999", area: "68556674745", solar_system: "Vega", user: user_2)
@@ -50,10 +45,8 @@ neptune_file3 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v166
 neptune_file = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202864/samples/planet_1_tfeqto.jpg")
 
 neptune_photos = [
-  {
-    io: neptune_file, filename: "planet1.png", content_type: "image/png",
-    io: neptune_file3, filename: "planet2.png", content_type: "image/png",
-  }
+  {io: neptune_file, filename: "planet1.jpg", content_type: "image/jpg"},
+  {io: neptune_file3, filename: "planet2.jpg", content_type: "image/jpg"}
 ]
 
 neptune = Planet.new(name: "Neptune", mass: "29999999", area: "68556674745", solar_system: "Spock", user: user_3)
