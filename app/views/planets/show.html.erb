@@ -49,6 +49,9 @@
       <div class= "button_delete_planet">
         <%= link_to "Delete your planet", planet_path(@planet), data: { turbo_method: :delete }, class: "btn btn-outline-light"%>
       </div>
+      <div>
+        <%= link_to "Add a review !", new_planet_review_path(@planet), class: "btn btn-outline-light"%>
+      </div>
     </div>
   </div>
 </div>
