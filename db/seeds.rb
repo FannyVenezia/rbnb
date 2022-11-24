@@ -40,10 +40,9 @@ uranus = Planet.new(name: "Uranus", mass: "29999999", area: "68556674745", solar
 uranus.photos.attach(uranus_photos)
 uranus.save
 
-
-
 neptune1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202847/samples/earth-blue-planet-globe-planet-87651_zsweew.jpg")
-neptune2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669296259/development/planet_1_j6ka4b.jpg")
+neptune2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669202864/samples/planet_1_tfeqto.jpg")
+
 
 neptune_photos = [
   {io: neptune1, filename: "planet1.jpg", content_type: "image/jpg"},
