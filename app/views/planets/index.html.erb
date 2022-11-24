@@ -13,9 +13,10 @@
   <% @planets.each do |planet| %>
   <div class="planets-cards">
     <div class="card" style="width: 18rem;">
+    <% if planet.photos.attached? %>
       <%= cl_image_tag planet.photos.first.key, height: 300, width: 250, crop: :fill %>
       <%= cl_image_tag planet.photos.last.key, height: 300, width: 250, crop: :fill %>
-      <%# <img src=" planet.photo.attached? " class="card-img-top" alt="..."> %>
+    <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= planet.name %></h5>
         <p class="card-text"> <%= planet.solar_system %> </p>
