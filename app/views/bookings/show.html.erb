@@ -2,3 +2,4 @@
 <%= @booking.start_date %>
 <%= @booking.end_date %>
 <%= link_to "Edit your reservation", edit_booking_path %>
+<%= link_to "Cancel your reservation", booking_path(@booking), data: { turbo_method: :delete } %>
