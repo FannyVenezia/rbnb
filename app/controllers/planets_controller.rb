@@ -1,9 +1,9 @@
 class PlanetsController < ApplicationController
-  before_action :set_planet, only: %i[show edit update create destroy]
+  before_action :set_planet, only: %i[show edit update destroy]
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @planets = policy_scope(Planet)
+    @planets = Planet.all
   end
 
   def show
@@ -17,16 +17,16 @@ class PlanetsController < ApplicationController
 
   def new
     @planet = Planet.new
-    @planet.user = current_user
-    authorize @planet
   end
 
   def create
     @planet = Planet.new(planet_params)
     @planet.user = current_user
-    authorize @planet
-    @planet.save
-    redirect_to planets_path(@planet), notice: "Planet was successfully created."
+    if @planet.save
+      redirect_to planet_path(@planet), notice: "Planet was successfully created."
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy
@@ -42,7 +42,7 @@ class PlanetsController < ApplicationController
   def update
     authorize @planet
     if @planet.update(planet_params)
-      redirect_to planet_path(@planet)
+      redirect_to planet_path(@planet), notice: "Your planet was successfully changed."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -55,6 +55,6 @@ class PlanetsController < ApplicationController
   end
 
   def planet_params
-    params.require(:planet).permit(:name, :mass, :area, :solar_system, :user, photos: [])
+    params.require(:planet).permit(:name, :mass, :area, :solar_system, photos: [])
   end
 end
