@@ -1,18 +1,51 @@
 <%= render "shared/navbar" %>
+<div class ="big_container">
 
 <div class="test" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
-  <% @planets.each do |planet| %>
+ <% @planets.each do |planet| %>
   <div class="planets-cards">
     <div class="card" style="width: 18rem;">
-      <%= cl_image_tag planet.photos.first.key, height: 300, width: 250, crop: :fill %>
-      <%= cl_image_tag planet.photos.last.key, height: 300, width: 250, crop: :fill %>
-      <%# <img src=" planet.photo.attached? " class="card-img-top" alt="..."> %>
+  <% if planet.photos.attached? %>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= cl_image_tag planet.photos.first.key, height: 300, width: 285, crop: :fill %>
+        </div>
+        <div class="carousel-item">
+          <%= cl_image_tag planet.photos.last.key, height: 300, width: 285, crop: :fill %>
+        </div>
+      </div>
+  <% end %>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
       <div class="card-body">
         <h5 class="card-title"><%= planet.name %></h5>
         <p class="card-text"> <%= planet.solar_system %> </p>
-        <%= link_to "View details", planet_path(planet), class: "btn btn-primary" %>
+        <%= link_to "View details", planet_path(planet), class: "btn btn-outline-dark" %>
       </div>
     </div>
   </div>
     <% end %>
+</div>
+</div>
+
+
+
+<div class="footer" style="background-color: rgba(35, 35, 104, 0.301)">
+  <p><span data-controller="typed-js"></span></p>
+		<a href="#"><i class="fab fa-youtube"></i></a>
+		<a href="#"><i class="fab fa-facebook"></i></a>
+		<a href="#"><i class="fab fa-twitter"></i></a>
+		<a href="#"><i class="fab fa-github"></i></a>
+		</ul>
 </div>
