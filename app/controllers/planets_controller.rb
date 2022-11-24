@@ -15,6 +15,10 @@ class PlanetsController < ApplicationController
     authorize @planet
   end
 
+  def thanks
+    @planets = Planet.all
+  end
+
   def new
     @planet = Planet.new
   end
