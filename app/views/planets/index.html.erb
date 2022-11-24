@@ -4,9 +4,8 @@
   <% @planets.each do |planet| %>
   <div class="planets-cards">
     <div class="card" style="width: 18rem;">
-    <% planet.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 250, crop: :fill %>
-    <% end %>
+      <%= cl_image_tag planet.photos.first.key, height: 300, width: 250, crop: :fill %>
+      <%= cl_image_tag planet.photos.last.key, height: 300, width: 250, crop: :fill %>
       <%# <img src=" planet.photo.attached? " class="card-img-top" alt="..."> %>
       <div class="card-body">
         <h5 class="card-title"><%= planet.name %></h5>
