@@ -1,4 +1,46 @@
-.greeting{
+.container_booking_card {
   display: block;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 7%;
+    padding: 32px;
+    width: 400px;
+    background-color: rgba(35, 35, 104, 0.301);
+    color: white;
+
+
+}
+.salutation {
+display: flex;
+justify-content: center;
+}
+
+.user_name{
+  margin-left: 8px;
+}
+.your_bookings{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.start_date{
+  margin-bottom: 10px;
+}
+.travellers{
+  margin-top: 10px;
+  display: flex;
+
+}
+.number{
+   margin-left: 8px;
+}
+.delete_button{
   text-align: center;
+}
+.edit_details_buttons{
+  margin-top: 15px;
+  text-align: center;
+}
+.back_button{
+  margin-left: 100px;
 }

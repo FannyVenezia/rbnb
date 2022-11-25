@@ -1,43 +1,52 @@
+
+.black_container{
+  display: flex;
+  background-color: black;
+}
 .planet_description {
+  justify-content: flex-end;
   list-style-type: none;
-  color:  #eacef9;
+  color: rgb(201, 180, 201);
   padding-top: 40px;
   padding-bottom: 40px;
+  margin-left: 30px;
 }
 
 .title_show {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.button_back_planets{
-  margin-top: 80px;
+.button_rent_planet{
+  margin-top: 50px;
+  margin-left: 40px;
 }
 
 .detail_rent{
   color: white;
   margin-right: 40px;
 }
-.button_rent{
-  margin-right: 40px;
-}
-.black_container{
-  background-color: black;
+.button_rent_planet{
+  margin-left: 100px;
 }
 
 .button_edit_planet{
   margin-bottom: 10px;
 }
-.owner_buttons{
-  text-align: center;
-  padding-bottom: 60px;
-}
+
 .buttons{
+  padding-bottom: 20px;
+  background-color: black;
   display: flex;
   justify-content: space-around;
 }
-.price{
-  text-align: right;
-}
+
+
 .carousel-item {
   transition-duration: 2s;
+}
+#carouselExampleSlidesOnly{
+  width: 50%;
+}
+#price{
+  word-spacing: 6px;
 }
