@@ -24,20 +24,24 @@
 
     <ul class= "planet_description">
       <div class= "planet_text">
-        <div class= "title_show"><h3><strong>Planet name:</strong></h3></div>
+        <div class= "title_show"><h3><strong>Planet name :</strong></h3>
           <li><%= @planet.name %></li>
-        <div class= "title_show"><h3><strong>Mass:</strong></h3></div>
+        </div>
+        <div class= "title_show"><h3><strong>Mass :</strong></h3>
           <li><%= @planet.mass%></li>
-        <div class= "title_show"><h3><strong>Area:</strong></h3></div>
+        </div>
+        <div class= "title_show"><h3><strong>Area :</strong></h3>
           <li><%=  @planet.area%></li>
-        <div class= "title_show"><h3><strong>Solar system:</strong></h3></div>
-          <li><%=  @planet.solar_system %></li><br>
-
-          <li><h5 id="price">Price: from 20 K$</h5></li>
-
-      </div>
-      <div class= "button_rent_planet">
-        <%= link_to "Rent this planet", new_planet_booking_path(@planet), class: "btn btn-outline-light"%>
+        </div>
+        <div class= "title_show"><h3><strong>Solar system :</strong></h3>
+          <li><%= @planet.solar_system %></li><br>
+        </div>
+        <div class= "title_show"><h3><strong>Description :</strong></h3>
+          <li><%= @planet.description %></li><br>
+        </div>
+        <div class= "title_show"><h3><strong>Price :</strong></h3>
+          <li><%= @planet.price %></li>
+        </div>
       </div>
     </ul>
   </div>
@@ -45,11 +49,14 @@
       <div class= "button_back_planets">
         <%= link_to "Back to planets", planets_path, class: "btn btn-outline-light"%>
       </div>
+      <% if @planet.user = current_user %>
       <div>
         <%= link_to "Delete your planet", planet_path(@planet), data: { turbo_method: :delete }, class: "btn btn-outline-light"%>
-      </div>
-      <div>
         <%= link_to "Edit your planet", edit_planet_path, class: "btn btn-outline-light"%>
+      </div>
+      <% end %>
+      <div>
+        <%= link_to "Rent this planet", new_planet_booking_path(@planet), class: "btn btn-outline-light"%>
         <%= link_to "Add a review !", new_planet_review_path(@planet), class: "btn btn-outline-light"%>
       </div>
     </div>
