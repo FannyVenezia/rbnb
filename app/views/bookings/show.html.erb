@@ -5,21 +5,24 @@
   <h2>We salute your courage</h2>
 </div>
 
-<div class="details-sejour" style="display: flex; justify-content: space-between">
+<div class="details-sejour" style="display: flex; justify-content: space-between; height: 400px">
   <div>
-    <h3 style="margin-bottom: 20px">Recap of your journey :</h5>
+    <h3 style="margin-top: 30px; margin-bottom: 20px">Recap of your journey :</h5>
     <h6>Planet name : <%= @booking.planet.name %></h6>
-    <p>Mass :<%= @booking.planet.mass %></p>
+    <p>Mass : <%= @booking.planet.mass %></p>
     <p>Area : <%= @booking.planet.area %></p>
     <p>Solar system : <%= @booking.planet.solar_system %></p>
   </div>
   <div style="margin-top: 50px">
-    <p>Number of visitors :</p><%= @booking.number_of_visitors %>
-    <p>Beginning date :</p><%= @booking.start_date %>
-    <p>End date :</p><%= @booking.end_date %>
+    <p>Number of visitors : <%= @booking.number_of_visitors %></p>
+    <p>Beginning date : <%= @booking.start_date %></p>
+    <p>End date : <%= @booking.end_date %></p>
     <p>Price : 200 000$</p>
-    <%= link_to "Edit your reservation", edit_booking_path %>
-    <%= link_to "Cancel your reservation", booking_path(@booking), data: { turbo_method: :delete } %>
+    <br>
+    <br>
+    <br>
+    <%= link_to "Edit your reservation", edit_booking_path, class: "btn btn-outline-light" %>
+    <%= link_to "Cancel your reservation", booking_path(@booking), data: { turbo_method: :delete }, class: "btn btn-outline-light" %>
   </div>
 </div>
 
@@ -61,13 +64,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="footer" style="background-color: rgba(35, 35, 104, 0.301)">
-  <p><span data-controller="typed-js"></span></p>
-		<a href="#"><i class="fab fa-youtube"></i></a>
-		<a href="#"><i class="fab fa-facebook"></i></a>
-		<a href="#"><i class="fab fa-twitter"></i></a>
-		<a href="#"><i class="fab fa-github"></i></a>
-		</ul>
 </div>

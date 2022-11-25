@@ -49,8 +49,9 @@
       <% end %>
     </div>
     <div style="margin-top: 50px">
-      <%= link_to "Details", review_path(review) %>
+      <%= link_to "Details", review_path(review), class: "btn btn-outline-light" %>
     </div>
   </div>
   <% end %>
 </div>
+      <%= link_to "Back to planets", planets_path, class: "btn btn-outline-light" %>

@@ -26,6 +26,34 @@ saturne = Planet.new(name: "Saturne", mass: "29999999", area: "68556674745", sol
 saturne.photos.attach(saturne_photos)
 saturne.save
 
+cérès1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669383396/pexels-photo-9474172_qe890b.webp")
+cérès2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669383396/uranus_kqo4ud.jpg")
+
+
+cérès_photos = [
+  {io: cérès1, filename: "planet1.jpg", content_type: "image/jpg"},
+  {io: cérès2, filename: "planet2.jpg", content_type: "image/jpg"}
+]
+
+cérès = Planet.new(name: "Cérès", mass: "2999", area: "685566", solar_system: "Spock", price: "450 000$", user: user_3)
+cérès.photos.attach(cérès_photos)
+cérès.save
+
+puts "Create new planets..."
+
+leonis1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669383396/pexels-photo-821644_qidgo5.jpg")
+leonis2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669383396/earth-soil-creep-moon-lunar-surface-87009_oibe7n.jpg")
+
+
+leonis_photos = [
+  {io: leonis1, filename: "planet1.jpg", content_type: "image/jpg"},
+  {io: leonis2, filename: "planet2.jpg", content_type: "image/jpg"}
+]
+
+leonis = Planet.new(name: "Leonis", mass: "2999", area: "685566", solar_system: "Deono", price: "200 000$", user: user_3)
+leonis.photos.attach(leonis_photos)
+leonis.save
+
 uranus1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669305211/development/uranus_fmujoj.jpg")
 uranus2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669296238/development/Mars_Girl_l4mi3w.jpg")
 
@@ -76,34 +104,6 @@ makémaké_photos = [
 makémaké = Planet.new(name: "Makémaké", mass: "2999", area: "685566", solar_system: "Spock", price: "10 000$", user: user_3)
 makémaké.photos.attach(makémaké_photos)
 makémaké.save
-
-cérès1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669304751/development/Neptune_h69i4t.jpg")
-cérès2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669296259/development/planet_1_j6ka4b.jpg")
-
-
-cérès_photos = [
-  {io: cérès1, filename: "planet1.jpg", content_type: "image/jpg"},
-  {io: cérès2, filename: "planet2.jpg", content_type: "image/jpg"}
-]
-
-cérès = Planet.new(name: "Cérès", mass: "2999", area: "685566", solar_system: "Spock", price: "450 000$", user: user_3)
-cérès.photos.attach(cérès_photos)
-cérès.save
-
-puts "Create new planets..."
-
-leonis1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669304751/development/Neptune_h69i4t.jpg")
-leonis2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669296259/development/planet_1_j6ka4b.jpg")
-
-
-leonis_photos = [
-  {io: leonis1, filename: "planet1.jpg", content_type: "image/jpg"},
-  {io: leonis2, filename: "planet2.jpg", content_type: "image/jpg"}
-]
-
-leonis = Planet.new(name: "Leonis", mass: "2999", area: "685566", solar_system: "Deono", price: "200 000$", user: user_3)
-leonis.photos.attach(leonis_photos)
-leonis.save
 
 lyncis1 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669304751/development/Neptune_h69i4t.jpg")
 lyncis2 = URI.open("https://res.cloudinary.com/dsas0wiz2/image/upload/v1669296259/development/planet_1_j6ka4b.jpg")
