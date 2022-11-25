@@ -1,4 +1,4 @@
-class PlanetPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   def show?
     true
   end
