@@ -6,21 +6,47 @@
 </div>
 
 <div style="text-align: center; margin-top: 40px">
-  <h4>All your reviews :</h4>
+  <h4>Your review :</h4>
 </div>
 
 <div class="details-sejour" style="display: flex; justify-content: space-between">
   <div>
-    <h3 style="margin-bottom: 20px">Your review :</h5>
+    <h3 style="margin-bottom: 20px"><%= @review.planet.name %></h5>
     <%= @review.title %>
-    <%= @review.content %>
-    <%= @review.rating %>
+    <%= @review.content %> <br>
+    <div>
+      <% if @review.rating == 4 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      <% elsif @review.rating == 3 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      <% elsif @review.rating == 5 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      <% elsif @review.rating == 2 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      <% end %>
+    </div>
+    <%= cl_image_tag @review.planet.photos.first.key %>
   </div>
-  <div style="margin-top: 50px">
-    <%= link_to "Edit your review", edit_review_path %>
-    <%= link_to "delete your review", review_path(@review), data: { turbo_method: :delete } %>
+  <div style="margin-top: 220px">
+    <%= link_to "Edit your review", edit_review_path, class: "btn btn-outline-light" %>
+    <%= link_to "delete your review", review_path(@review), data: { turbo_method: :delete }, class: "btn btn-outline-light" %>
   </div>
 </div>
 
-<%= link_to "All your reviews", reviews_path %>
-<%= link_to "Surprise", thanks_path %>
+<%= link_to "All your reviews", reviews_path, class: "btn btn-outline-light" %>

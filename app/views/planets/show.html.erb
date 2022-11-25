@@ -36,9 +36,11 @@
         <div class= "title_show"><h3><strong>Solar system :</strong></h3>
           <li><%= @planet.solar_system %></li><br>
         </div>
+        <% if @planet.description %>
         <div class= "title_show"><h3><strong>Description :</strong></h3>
           <li><%= @planet.description %></li><br>
         </div>
+        <% end %>
         <div class= "title_show"><h3><strong>Price :</strong></h3>
           <li><%= @planet.price %></li>
         </div>
