@@ -13,11 +13,13 @@
   <% current_user.reviews.each do |review| %>
   <div>
     <div>
-      <%= review.name %>
+      <%= review.title %>
     </div>
     <div>
       <%= review.planet.name %>
-      <%= review.planet.photos.first %>
+    </div>
+    <div>
+      <%= cl_image_tag review.planet.photos.first.key %>
     </div>
     <div>
       <% if review.rating == 4 %>

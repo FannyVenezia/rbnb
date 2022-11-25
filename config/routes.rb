@@ -5,8 +5,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
     resources :reviews, only: [:new, :create]
   end
-  resources :bookings, only: [:destroy, :edit, :index, :show]
-  resources :reviews, only: [:destroy, :edit, :index, :show]
+  resources :bookings, only: [:destroy, :edit, :update, :index, :show]
+  resources :reviews, only: [:destroy, :edit, :update, :index, :show]
   resources :foods, only: [:new, :create, :index]
   get 'thanks', to: 'planets#thanks'
 end

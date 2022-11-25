@@ -1,6 +1,12 @@
+<div class="container_new">
+<div class="container-new-edit color">
+<h2 class="title-new-edit"> <br/>  <i class="fa-solid fa-rocket"></i>
+ <br/> welcome on board <br/> rent your planet</h2>
+
 <%= simple_form_for([@planet, @booking]) do |f| %>
   <%= f.input :number_of_visitors %>
   <%= f.input :start_date, as: :date, html5: true %>
   <%= f.input :end_date, as: :date, html5: true  %>
   <%= f.submit %>
 <% end %>
+</div>

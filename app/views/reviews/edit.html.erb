@@ -1,6 +1,14 @@
-<%= simple_form_for([@planet, @review]) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :content %>
-  <%= f.input :rating  %>
-  <%= f.submit %>
-<% end %>
+<div class="container_new">
+  <div class="container-new-edit color">
+    <div style="text-align: center">
+      <h2>You got something wrong ?</h2>
+      <h3>no problem !</h3>
+    </div>
+
+  <%= simple_form_for([@planet, @review]) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.input :rating  %>
+    <%= f.submit %>
+  <% end %>
+</div>
