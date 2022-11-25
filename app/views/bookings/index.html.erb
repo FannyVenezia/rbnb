@@ -1,26 +1,45 @@
 
 <%= render "shared/navbar" %>
-
-<div class= "container">
-  <div class= "greeting">
-  <h2>Hello</h2><h2><%= current_user.first_name %>!</h2>
+<div class="row justify-content-center align-items-center">
+<div class="container_booking_card">
+  <div class= "salutation">
+    <div>
+      <h2>Hello</h2>
+    </div>
+    <div class= "user_name">
+      <h2><%= current_user.first_name %>!</h2>
+    </div>
   </div>
+
+    <div class= "your_bookings">
       <h3>Your bookings:</h3>
+    </div>
     <% current_user.bookings.each do |booking| %>
+    <div class="start_date">
      <h5>Your journey begins on:</h5>
       <%= booking.start_date %>
+    </div>
       <h5>And finish on:</h5>
       <%= booking.end_date %>
+    <div class="travellers">
       <h5>Number of travellers: </h5>
-      <%= booking.number_of_visitors %>
-      <%= link_to "View details", booking_path(booking), class: "btn btn-outline-dark" %>
-      <%= link_to "Delete your booking", booking_path(booking), data: { turbo_method: :delete }, class: "btn btn-outline-dark" %>
-      <%= link_to "Edit your booking", edit_booking_path(booking), class: "btn btn-outline-dark"%>
+      <div class= "number">
+        <%= booking.number_of_visitors %>
+       </div>
+    </div>
+      <div class="edit_details_buttons">
+      <%= link_to "View details", booking_path(booking), class: "btn btn-outline-light" %>
+      <%= link_to "Edit your booking", edit_booking_path(booking), class: "btn btn-outline-light"%>
+      </div>
+      <div class="delete_button">
+        <%= link_to "Delete your booking", booking_path(booking), data: { turbo_method: :delete }, class: "btn btn-outline-light" %>
+      </div>
     <% end %>
- </div>
 </div>
-
-<%= link_to "Back to planets", planets_path, class: "btn btn-outline-dark"%>
+</div>
+<div class="back_button">
+  <%= link_to "Back to planets", planets_path, class: "btn btn-outline-dark"%>
+</div>
 
 
 <div class="footer" style="background-color: rgba(35, 35, 104, 0.301)">
@@ -29,5 +48,5 @@
 		<a href="#"><i class="fab fa-facebook"></i></a>
 		<a href="#"><i class="fab fa-twitter"></i></a>
 		<a href="#"><i class="fab fa-github"></i></a>
-		</ul>
+
 </div>
