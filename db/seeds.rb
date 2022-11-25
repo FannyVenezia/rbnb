@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
-
+Booking.destroy_all
 Planet.destroy_all
 User.destroy_all
 
@@ -130,3 +130,7 @@ delphini_photos = [
 delphini = Planet.new(name: "Delphini", mass: "2999", area: "685566", solar_system: "Lava", price: "300 000$", user: user_3)
 delphini.photos.attach(delphini_photos)
 delphini.save
+
+# seed booking
+
+# booking1 = Booking.create(user: User.last, planet: Planet.last, :number_of_visitors 4, start_date: "28/11/2022", end_date: "01/12/2022")
