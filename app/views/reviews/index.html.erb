@@ -1,0 +1,63 @@
+<%= render "shared/navbar" %>
+
+<div class="entry-ban" style="text-align: center">
+  <h1 style="margin-top: 30px">Thank you for your contribution !</h1>
+  <h2>We appreciate all your opinions</h2>
+</div>
+
+<div style="text-align: center; margin-top: 40px">
+  <h4>All your reviews :</h4>
+</div>
+
+<div class="details-sejour" style="display: flex; justify-content: space-between">
+  <% current_user.reviews.each do |review| %>
+  <div>
+    <div>
+      <%= review.name %>
+    </div>
+    <div>
+      <%= review.planet.name %>
+      <%= review.planet.photos.first %>
+    </div>
+    <div>
+      <% if review.rating == 4 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      <% elsif review.rating == 3 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      <% elsif review.rating == 5 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      <% elsif review.rating == 2 %>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      <% end %>
+    </div>
+    <div style="margin-top: 50px">
+      <%= link_to "Details", review_path(review) %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="footer" style="background-color: rgba(35, 35, 104, 0.301)">
+  <p><span data-controller="typed-js"></span></p>
+		<a href="#"><i class="fab fa-youtube"></i></a>
+		<a href="#"><i class="fab fa-facebook"></i></a>
+		<a href="#"><i class="fab fa-twitter"></i></a>
+		<a href="#"><i class="fab fa-github"></i></a>
+		</ul>
+</div>
