@@ -1,4 +1,5 @@
 <%= render "shared/navbar" %>
+
 <div class ="big_container">
 
 <%= form_with url: planets_path, method: :get, class: "d-flex" do %>
@@ -47,14 +48,4 @@
     <% end %>
 </div>
 </div>
-
-
-
-<div class="footer" style="background-color: rgba(35, 35, 104, 0.301)">
-  <p><span data-controller="typed-js"></span></p>
-		<a href="#"><i class="fab fa-youtube"></i></a>
-		<a href="#"><i class="fab fa-facebook"></i></a>
-		<a href="#"><i class="fab fa-twitter"></i></a>
-		<a href="#"><i class="fab fa-github"></i></a>
-		</ul>
-</div>
+<%= render "shared/footer" %>
