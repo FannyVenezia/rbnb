@@ -1,13 +1,13 @@
 <div class="container_new">
-<div class="container-new-edit color">
-<h2 class="title-new-edit"> <br/>  <i class="fa-solid fa-plane-up"></i>
- <br/> now your booking is ready <br/> enjoy your trip</h2>
+  <div class="container-new-edit color">
+    <h2 class="title-new-edit"> <br/>  <i class="fa-solid fa-plane-up"></i>
+    <br/> now your booking is ready <br/> enjoy your trip</h2>
 
-<%= simple_form_for([@planet, @booking]) do |f| %>
-  <%= f.input :number_of_visitors %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true  %>
-  <%= f.submit %>
-<% end %>
-</div>
+    <%= simple_form_for([@planet, @booking]) do |f| %>
+      <%= f.input :number_of_visitors %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true  %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>

@@ -16,7 +16,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render "shared/flashes" %>
-    <% unless  ( controller_name == "planets" && action_name == "new") || ( controller_name == "pages" && action_name == "home") || ( controller_name == "planets" && action_name == "index")%>
+    <% unless  ( controller_name == "planets" && action_name == "new") || ( controller_name == "pages" && action_name == "home") || ( controller_name == "planets" && action_name == "index") || ( controller_name == "reviews" && action_name == "new") || ( controller_name == "planets" && action_name == "thanks")%>
      <%= render "shared/footer" %>
     <% end %>
   </body>

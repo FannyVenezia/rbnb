@@ -1,8 +1,19 @@
 <%= render "shared/navbar" %>
 
 <div class="container_new">
-  <h2 class="title-new-edit"> <br/>  <i class="fa-solid fa-globe"></i>
-  <br/> create your new planet here</h2>
+  <div class="container-new-edit color">
+    <h2 class="title-new-edit"> <br/>  <i class="fa-solid fa-globe"></i>
+    <br/> create your new planet here</h2>
 
-  <%= render "form", planet: @planet %>
+    <%= simple_form_for @planet do |f| %>
+      <%= f.input :name %>
+      <%= f.input :mass %>
+      <%= f.input :area %>
+      <%= f.input :solar_system %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 <div>

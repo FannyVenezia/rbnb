@@ -34,7 +34,7 @@ class ReviewsController < ApplicationController
   def update
     authorize @review
     if @review.update(review_params)
-      redirect_to root_path, notice: "Your review was successfully changed."
+      redirect_to review_path(@review), notice: "Your review was successfully changed."
     else
       render :edit, status: :unprocessable_entity
     end
